@@ -1,0 +1,37 @@
+{
+    "title": "Research at AUST",
+    "description": "Ahsanullah University of Science & Technology (AUST) fosters a strong culture of research and innovation.",
+    "researchAreas": [
+      {
+        "name": "Artificial Intelligence & Machine Learning",
+        "details": "Research on AI and ML algorithms, data processing, and machine learning models."
+      },
+      {
+        "name": "Renewable Energy & Sustainability",
+        "details": "Exploring green energy solutions and sustainable technologies for a better future."
+      },
+      {
+        "name": "Robotics & Automation",
+        "details": "Developing robotic systems and automated solutions for various industries."
+      },
+      {
+        "name": "Biomedical Engineering",
+        "details": "Creating advanced medical devices and technologies for healthcare."
+      },
+      {
+        "name": "Cybersecurity & Data Science",
+        "details": "Researching cybersecurity protocols and data science for secure information processing."
+      }
+    ],
+    "ongoingProjects": [
+      {
+        "projectName": "AI Research in Healthcare",
+        "projectDescription": "Using AI to improve healthcare systems and treatment methods."
+      },
+      {
+        "projectName": "Solar Energy Storage System",
+        "projectDescription": "Research on new storage technologies for renewable energy."
+      }
+    ]
+  }
+  

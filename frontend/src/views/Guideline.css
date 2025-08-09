@@ -1,0 +1,85 @@
+/* Make sure the HTML and body take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Centering the Title */
+.guideline-title {
+    display: block !important; /* Ensures visibility */
+    font-size: 28px; /* Adjust size */
+    font-weight: bold;
+    color: #000; /* Ensure text is black */
+    text-align: center; /* Center the title */
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Container to shift content right */
+.guideline-content {
+    margin-left: 40px; /* Moves everything slightly to the right */
+    max-width: 800px; /* Limits width for readability */
+}
+
+/* Ensuring section visibility */
+.guideline-section {
+    display: block !important;
+    margin-bottom: 20px; /* Adds spacing */
+}
+
+.guideline-section h2 {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+.guideline-section p {
+    display: block !important; /* Ensures visibility */
+    font-size: 16px; /* Adjust size */
+    color: #000; /* Ensure text is black */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 10px; /* Add spacing */
+}
+
+/* Bullet Point List Styling */
+.guideline-section ul {
+    padding-left: 20px; /* Ensures bullets appear */
+    list-style-type: disc; /* Ensures bullet points */
+    color: #333; /* Ensures visibility */
+}
+
+.guideline-section li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000; /* Ensures text is visible */
+    margin-bottom: 5px;
+}
+
+/* Wrapper to control layout */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* Ensures content grows and pushes the footer down */
+.main-content {
+    padding-top: 65px;
+    flex: 1;
+    padding-bottom: 20px; /* Adds space for the footer */
+}
+
+/* Footer should be at the bottom, but not fixed */
+.footer {
+    background-color: #013220;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,56 @@
+/* Styling for the user table */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif; /* Improved font for better readability */
+}
+/* Styling for the user management heading */
+.admin-home-wrapper h3 {
+  margin-top: 26px;
+  margin-bottom: 20px; /* Adds space below the heading */
+  font-size: 24px; /* Adjusts the size of the heading */
+  font-weight: bold; /* Makes the heading bold */
+  color: #333; /* Ensures the heading color is black for readability */
+}
+
+.user-table th, .user-table td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Increased padding for more spacing */
+  text-align: left;
+  color: #333; /* Default text color for better readability */
+}
+
+.user-table th {
+  background-color: #f4f4f4; /* Light background for table headers */
+  color: #333; /* Make the header text color black */
+  font-weight: bold; /* Make the header text bold for emphasis */
+}
+
+/* Hover effect for table rows */
+.user-table tr:hover {
+  background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+/* Styling for delete button */
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 15px; /* Increased padding for a larger button */
+  cursor: pointer;
+  border-radius: 4px; /* Slightly rounded corners for the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for delete button */
+.delete-btn:hover {
+  background-color: darkred; /* Darker red on hover for feedback */
+}
+
+/* Styling for the "No users found" message */
+.user-table td[colspan="4"] {
+  text-align: center;
+  font-style: italic;
+  color: #666; /* Light gray color for the "no users" message */
+}

@@ -1,0 +1,83 @@
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #aab9c1, #3f4c6b); /* Same as admin background */
+  }
+  
+  /* Login Form */
+  .login-form {
+    background-color: white;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Group */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #2980b9;
+  }
+  
+  /* Login Button */
+  .login-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #1c5984;
+  }
+  
+  /* Signup Link */
+  .signup-link {
+    margin-top: 10px;
+  }
+  
+  .signup-link a {
+    color: #2980b9;
+  }
+  
+  /* Google Login */
+  .google-login {
+    margin-top: 20px;
+  }
+  

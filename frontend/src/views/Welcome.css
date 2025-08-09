@@ -1,0 +1,37 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Apply styles only inside the welcome section */
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    border: 2px solid red; /* Temporary border */
+    padding: 20px;
+}
+
+.box {
+    border: 2px solid blue; /* Temporary border */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color:hsl(0, 23.60%, 89.20%);
+    width: fit-content;
+    margin: auto;
+}
+
+/* Debugging styles */
+#signInButton, #signOutButton {
+    border: 1px solid red; /* Temporary border to check if the buttons are rendered */
+}

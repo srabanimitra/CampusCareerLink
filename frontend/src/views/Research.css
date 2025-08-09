@@ -1,0 +1,144 @@
+/* General Container */
+.research-container {
+  width: 80%;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #004d99;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Research Areas Section */
+.research-areas {
+  margin-bottom: 40px;
+}
+
+.research-areas h2 {
+  font-size: 1.8rem;
+  color: #004d99;
+  border-bottom: 2px solid #004d99;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.area-item {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.area-item strong {
+  font-weight: bold;
+  color: #004d99;
+}
+
+/* Ongoing Projects Section */
+.ongoing-projects {
+  margin-bottom: 40px;
+}
+
+.ongoing-projects h2 {
+  font-size: 1.8rem;
+  color: #004d99;
+  border-bottom: 2px solid #004d99;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.project-item {
+  margin-bottom: 20px;
+}
+
+.project-item strong {
+  font-size: 1.2rem;
+  color: #003366;
+}
+
+.expand-button {
+  background-color: #004d99;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.expand-button:hover {
+  background-color: #003366;
+}
+
+.project-details {
+  margin-top: 15px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Publications Section */
+.publications {
+  margin-bottom: 40px;
+}
+
+.publications h2 {
+  font-size: 1.8rem;
+  color: #004d99;
+  border-bottom: 2px solid #004d99;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.publication-item {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+
+.publication-item a {
+  color: #004d99;
+  text-decoration: none;
+}
+
+.publication-item a:hover {
+  text-decoration: underline;
+}
+
+/* Collaborations Section */
+.collaborations {
+  margin-bottom: 40px;
+}
+
+.collaborations h2 {
+  font-size: 1.8rem;
+  color: #004d99;
+  border-bottom: 2px solid #004d99;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.collaboration-item {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.collaboration-item strong {
+  color: #003366;
+}

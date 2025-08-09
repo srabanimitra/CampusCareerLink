@@ -1,0 +1,178 @@
+/* Admin home container */
+.admin-home-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensures the container takes full width */
+    background-color: #f4f7f6; /* Light background for contrast */
+    padding: 20px;
+  }
+  
+  /* Wrapper for the entire page */
+  .admin-home-wrapper {
+    padding: 0;
+    margin-top: 40px;
+    margin-left: 280px; /* Matches the sidebar width */
+    width: calc(100% - 280px); /* Avoid horizontal scroll */
+    box-sizing: border-box;
+    overflow-y: auto; /* Allows vertical scroll only if necessary */
+    height: 100vh; /* Full height */
+    max-height: 100vh; /* Prevents exceeding viewport height */
+    background-color: #ffffff; /* White background for content */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  /* Main content wrapper for user list, calendar, and circular management */
+  .admin-home-content {
+    display: flex;
+    gap: 20px; /* Adds space between user list and calendar */
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Makes the layout responsive */
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent horizontal scrolling */
+    padding: 20px;
+    background-color: #f9f9f9; /* Slightly off-white background */
+    border-radius: 8px;
+  }
+  
+  /* User list section */
+  .admin-home-user-list {
+    flex: 1; /* Allow User Management to take available space */
+    min-width: 350px; /* Set a smaller minimum width for User Management */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent overflow */
+    padding: 15px;
+    background-color: #e9f5e9; /* Light green background */
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+  
+  /* Calendar section */
+  .admin-home-calendar {
+    min-width: 300px; /* Ensures calendar has enough space */
+    max-width: 400px; /* Prevents calendar from taking too much space */
+    box-sizing: border-box;
+    height: auto;
+    overflow: hidden; /* Prevent scroll within the calendar */
+    max-height: 100%;
+    padding: 15px;
+    background-color: #e9f5e9; /* Greenish background */
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Manage Circular section */
+  .admin-home-circular-management {
+    margin-top: 20px;
+    width: 100%; /* Take full available width */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent overflow */
+    padding: 20px;
+    background-color: #e9f5e9; /* Greenish background */
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table styling */
+  .user-table,
+  .circular-table {
+    width: 100%; /* Allow table to take full available space */
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Adds space below the table */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    background-color: #fff;
+  }
+  
+  /* Table headers and data */
+  .user-table th, .circular-table th,
+  .user-table td, .circular-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word; /* Ensure content wraps inside table cells */
+    color: #333; /* Text color */
+  }
+  
+  /* Table header styling with green */
+  .user-table th, .circular-table th {
+    background-color: #2ecc71; /* Green header */
+    color: white; /* White text for header */
+    font-weight: bold;
+  }
+  
+  /* Table row hover effect */
+  .user-table tr:hover, .circular-table tr:hover {
+    background-color: #f1f8f1; /* Light green hover effect */
+  }
+  
+  /* Delete button */
+  .delete-btn {
+    background-color: #e74c3c; /* Red color for delete */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Calendar styling */
+  .react-calendar {
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  /* Header text */
+  h4 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #27ae60; /* Green color for headers */
+    font-weight: bold;
+  }
+  
+  /* Prevent horizontal and vertical scrolling on the body */
+  body, html {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Modern font */
+    background-color: #f4f7f6; /* Light background color */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .admin-home-wrapper {
+      margin-left: 0; /* Adjust margin for small screens */
+      width: 100%; /* Full width for smaller screens */
+    }
+  
+    .admin-home-content {
+      flex-direction: column; /* Stack the content on smaller screens */
+    }
+  
+    .admin-home-user-list, .admin-home-calendar {
+      min-width: 100%; /* Allow full width for smaller screens */
+    }
+  
+    .admin-home-circular-management {
+      margin-top: 15px;
+    }
+  
+    .user-table th, .user-table td {
+      padding: 10px; /* Adjust padding for smaller devices */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .user-table th, .user-table td {
+      padding: 8px; /* Reduce padding for very small devices */
+    }
+  }
+  

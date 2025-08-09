@@ -1,0 +1,131 @@
+/* Container for the entire contact section */
+.contact-us-container {
+    padding: 40px;
+    background: linear-gradient(to right, #e0e7ff, #c7d2fe); /* Soft gradient */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 40px; /* Adding margin-top for better spacing */
+}
+
+/* Flexbox layout for map and contact info */
+.contact-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Ensures responsive layout on smaller screens */
+}
+
+/* Styling for the map container */
+.map-container {
+    flex: 2; /* Makes the map take more space */
+    height: 500px; /* Set map's height */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #d1e7fd; /* Light border for map */
+}
+
+/* Styling for the contact details section */
+.contact-details {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #d1e7fd;
+}
+
+/* Contact Details Heading */
+.contact-details h3 {
+    color: #4d4d4d;
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3f7ecf;
+}
+
+/* Contact details text */
+.contact-details p {
+    font-size: 18px;
+    color: #555;
+    margin: 18px 0;
+    line-height: 1.6;
+}
+
+/* Links and Hover effect */
+.contact-details a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.contact-details a:hover {
+    color: #ff6200;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Follow Us Section */
+.follow-us h4 {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.follow-us ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.follow-us li {
+    margin: 10px 0;
+}
+
+.follow-us a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.follow-us a:hover {
+    color: #ff6200;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Title for the contact page */
+.contact-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #4d4d4d;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Adds spacing between letters */
+    padding-bottom: 20px; /* Adds more space below the title */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .contact-details {
+        padding: 20px;
+    }
+
+    .contact-title {
+        font-size: 30px;
+    }
+}

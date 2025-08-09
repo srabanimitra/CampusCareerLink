@@ -1,0 +1,72 @@
+/* Ensure full page layout */
+html, body {
+  height: auto;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  display: block; /* Ensures normal document flow */
+}
+
+/* Main container structure */
+#root, .app-container {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+/* Ensures content grows and pushes the footer down */
+.main-content {
+  flex-grow: 1;
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex; /* Adds space for footer */
+}
+
+/* Footer stays at the bottom */
+.footer {
+  background-color: #013220;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
+
+/* Ensure banner doesn't block scrolling */
+.banner {
+  background-image: url('../assets/images/aust.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+}
+.sidebar {
+  width: 250px; /* Adjust width as needed */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1d2634;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .banner h1 {
+      font-size: 2.2rem;
+  }
+}

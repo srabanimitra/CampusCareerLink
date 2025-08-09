@@ -1,0 +1,97 @@
+
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+      - development
+      - srabani2.0
+
+jobs:
+  backend:
+    name: Laravel Backend CI
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: auth
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping --host=localhost --user=root --password=root" --health-interval=10s --health-timeout=5s --health-retries=5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          tools: composer
+          extensions: mbstring, bcmath, pdo, pdo_mysql
+
+      - name: Install Composer Dependencies
+        run: composer install --prefer-dist --no-progress
+        working-directory: ./api-backend
+
+      - name: Set up Environment
+        run: |
+          cp .env.example .env
+          echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env
+          echo "DB_CONNECTION=mysql" >> .env
+          echo "DB_HOST=127.0.0.1" >> .env
+          echo "DB_PORT=3306" >> .env
+          echo "DB_DATABASE=auth" >> .env
+          echo "DB_USERNAME=root" >> .env
+          echo "DB_PASSWORD=root" >> .env
+          php artisan key:generate --force
+        working-directory: ./api-backend
+
+      - name: Verify MySQL Connection
+        run: |
+          until mysqladmin ping -h 127.0.0.1 -u root --password=root; do
+            echo "Waiting for MySQL to be ready..."
+            sleep 2
+          done
+          echo "MySQL is up and running!"
+        working-directory: ./api-backend
+
+      - name: Run Database Migrations
+        run: php artisan migrate --force
+        working-directory: ./api-backend
+        
+  frontend:
+    name: React Frontend CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+        working-directory: frontend
+      - name: List Files in src/views
+        run: ls -la src/views
+        working-directory: frontend
+
+      - name: Show AdminLogin.jsx Content
+        run: cat src/views/AdminLogin.jsx
+        working-directory: frontend
+
+      - name: Run Lint
+        run: npm run lint
+        working-directory: frontend
+
+      - name: Build React App
+        run: npm run build
+        working-directory: frontend

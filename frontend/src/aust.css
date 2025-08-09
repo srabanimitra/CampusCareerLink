@@ -1,0 +1,4 @@
+.aust {
+    height: auto;        /* Automatically adjusts the height to maintain aspect ratio */
+    width: auto;        /* Set the width to a specific value, adjust as needed */
+}

@@ -1,0 +1,4 @@
+.logo {
+    height: auto;        /* Automatically adjusts the height to maintain aspect ratio */
+    width: 55px;        /* Set the width to a specific value, adjust as needed */
+}

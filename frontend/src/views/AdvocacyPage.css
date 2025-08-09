@@ -1,0 +1,81 @@
+/* General Layout */
+.advocacy-container {
+  padding: 40px;
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.advocacy-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.advocacy-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Content Sections */
+.advocacy-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mission, .help, .success, .impact {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission h2, .help h2, .success h2, .impact h2 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.mission p, .help ul, .success p, .impact ul {
+  font-size: 1rem;
+  color: #555;
+}
+
+.help ul, .impact ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.help li, .impact li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.success p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #777;
+}
+
+/* Footer */
+.advocacy-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.advocacy-footer p {
+  font-size: 1rem;
+}
+
+/* Ensure no white lines */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
