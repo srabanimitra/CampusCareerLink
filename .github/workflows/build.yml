@@ -5,9 +5,7 @@ on:
   pull_request:
     branches:
       - main
-      - development
-      - srabani2.0
-
+     
 jobs:
   backend:
     name: Laravel Backend CI
